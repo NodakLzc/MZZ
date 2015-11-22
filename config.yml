@@ -1,4 +1,11 @@
 ZY:
  - 避火咒
+ - 小乐大帅哥
 避火咒:
- - FIRE_RESISTANCE
+ - effect FIRE_RESISTANCE 10 2
+ - effect POISON 10 2
+小乐大帅哥:
+ - effect REGENERATION 10000 2
+ - msgall kill a_austin
+ - exptake 5 你不够经验哟
+ - spawn PIG
