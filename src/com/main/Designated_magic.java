@@ -4,12 +4,8 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 
-import com.main.Main;
-
-@SuppressWarnings("deprecation")
 public class Designated_magic implements Listener{
 	@SuppressWarnings("unused")
 	private Main plugin;
