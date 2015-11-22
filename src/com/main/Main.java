@@ -13,7 +13,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionEffect;
 
 @SuppressWarnings("deprecation")
-public class main extends JavaPlugin implements Listener {
+public class Main extends JavaPlugin implements Listener {
 	public void onLoad() {
 		this.saveDefaultConfig();
 		System.out.println("[" + getName() + "]" + " " + "加载成功");
@@ -21,6 +21,7 @@ public class main extends JavaPlugin implements Listener {
 
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);
+		getServer().getPluginManager().registerEvents(new Designated_magic(this), this);
 		System.out.println("[" + getName() + "]" + " " + "开启成功");
 	}
 
@@ -28,8 +29,6 @@ public class main extends JavaPlugin implements Listener {
 		System.out.println("[" + getName() + "]" + " " + "关闭成功");
 	}
 
-	
-	
 	@EventHandler
 	public void onPlayerChat(PlayerChatEvent e) {
 		Player p = e.getPlayer();

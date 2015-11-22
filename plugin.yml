@@ -1,5 +1,5 @@
 name: MZ
-main: com.main.main
+main: com.main.Main
 version: 1.0
 commands:
  zyreload: 
