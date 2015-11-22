@@ -104,22 +104,25 @@ public class main extends JavaPlugin implements Listener {
 						if (!p.hasPermission(Permission))
 							break;
 					}
+					
+					
 					if (msg2.startsWith("explset")) {
 						int i = msg2.indexOf(" ", 0);
 						String exp = msg2.substring(i + 1, msg2.length());
 						p.setLevel(Integer.parseInt(exp));
 					}
+					
+					
+					
 					if (msg2.startsWith("spawn")) {
 						int i = msg2.indexOf(" ", 0);
 						String s1 = msg2.substring(i + 1, msg2.length());
 						if (s1.equalsIgnoreCase("CHICKEN")){
 							
-							 = EntityType.CHICKEN;
 							p.getWorld().spawnEntity(p.getLocation(), EntityType.CHICKEN);
 						}
 						else if (s1.equalsIgnoreCase("COW")){
 							
-							 = EntityType.COW;
 							p.getWorld().spawnEntity(p.getLocation(), EntityType.COW);
 						}
 						else if (s1.equalsIgnoreCase("CREEPER")){
@@ -254,9 +257,9 @@ public class main extends JavaPlugin implements Listener {
 							
 							p.getWorld().spawnEntity(p.getLocation(), EntityType.MINECART_HOPPER);
 						}
-						else if (s1.equalsIgnoreCase("MINECART__SPAWNER")){
+						else if (s1.equalsIgnoreCase("MINECART_MOB_SPAWNER")){
 							
-							p.getWorld().spawnEntity(p.getLocation(), EntityType.MINECART__SPAWNER);
+							p.getWorld().spawnEntity(p.getLocation(), EntityType.MINECART_MOB_SPAWNER);
 						}
 						else if (s1.equalsIgnoreCase("ENDERCRYSTAL")){
 							
@@ -266,13 +269,13 @@ public class main extends JavaPlugin implements Listener {
 						else if (s1.equalsIgnoreCase("EXPERIENCEORB")) {
 							
 							p.getWorld().spawnEntity(p.getLocation(), EntityType.EXPERIENCE_ORB);
+							}
+					
 						}
-						
 					}
 				}
 			}
 		}
-	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String lable,
 			String args[]) {
